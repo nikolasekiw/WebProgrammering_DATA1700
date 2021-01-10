@@ -1,0 +1,34 @@
+package oslomet.webprog;
+
+/**
+ * Dette er kun en POJO som inneholder Bil. Denne må være helt lik tabellen Bil i databasen
+ */
+
+public class Bil {
+    private String merke;
+    private String type;
+
+    public Bil(String merke, String type) {
+        this.merke = merke;
+        this.type = type;
+    }
+
+    public Bil() {}
+
+    public String getMerke() {
+        return merke;
+    }
+
+    public void setMerke(String merke) {
+        this.merke = merke;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+}

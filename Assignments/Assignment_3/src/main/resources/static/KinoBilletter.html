@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig 2</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="KinoBilletter.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Bestilling av kinobilletter</h1>
+<table class="table table-striped">
+    <tr>
+        <td>Velg film:</td>
+        <td><div id="film" class="dropdown"></div></td>
+        <td><span id="filmFeil" style="color: red"></span><br></td>
+    </tr>
+    <tr>
+        <td>Antall:</td>
+        <td><input id="antall" type="text" size="2"></td>
+        <td><span id="antallFeil" style="color: red"></span></td>
+    </tr>
+    <tr>
+        <td>Fornavn:</td>
+        <td><input id="fornavn" type="text"></td>
+        <td><span id="fornavnFeil" style="color: red"></span></td>
+    </tr>
+    <tr>
+        <td>Etternavn:</td>
+        <td><input id="etternavn" type="text"></td>
+        <td><span id="etternavnFeil" style="color: red"></span></td>
+    </tr>
+    <tr>
+        <td>Telefonnr:</td>
+        <td><input id="telefonnr" type="text"></td>
+        <td><span id="telefonnrFeil" style="color: red"></span></td>
+    </tr>
+    <tr>
+        <td>Epost:</td>
+        <td><input id="epost" type="text"></td>
+        <td><span id="epostFeil" style="color: red"></span><br></td>
+    </tr>
+</table>
+<button class="btn btn-primary" onclick="kjopBillett()">Kjøp billett</button>
+<button class="btn btn-primary" onclick="hentAlle()">Hent alle billetter</button>
+<h3>Alle billetter</h3>
+<div id="alleBilletter"></div>
+<button class="btn btn-danger" id="slettBilletter" onclick="slettBilletter()">Slett alle billettene</button>
+</body>
+</html>

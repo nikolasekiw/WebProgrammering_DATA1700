@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>schema.sql</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+schema.sql</font>
+</center></td></tr></table>
+<pre><span class="s0">CREATE TABLE </span>Kunde
+(
+    KId <span class="s0">INTEGER AUTO_INCREMENT NOT NULL</span>,
+    Fornavn <span class="s0">VARCHAR</span>(<span class="s2">50</span>) <span class="s0">NOT NULL</span>,
+    Etternavn <span class="s0">VARCHAR</span>(<span class="s2">50</span>) <span class="s0">NOT NULL</span>,
+    Adresse <span class="s0">VARCHAR</span>(<span class="s2">50</span>) <span class="s0">NOT NULL</span>,
+    <span class="s0">PRIMARY KEY </span>(KId)
+);
+
+<span class="s0">CREATE TABLE </span>Ordre
+(
+    <span class="s0">OId INTEGER AUTO_INCREMENT NOT NULL</span>,
+    KId <span class="s0">INTEGER</span>,
+    Varenavn <span class="s0">VARCHAR</span>(<span class="s2">50</span>),
+    Pris <span class="s0">DECIMAL</span>(<span class="s2">10</span>,<span class="s2">0</span>),
+    <span class="s0">PRIMARY KEY </span>(<span class="s0">OId</span>),
+    <span class="s0">FOREIGN KEY </span>(KId) <span class="s0">REFERENCES </span>Kunde(KId)
+);
+</pre>
+</body>
+</html>

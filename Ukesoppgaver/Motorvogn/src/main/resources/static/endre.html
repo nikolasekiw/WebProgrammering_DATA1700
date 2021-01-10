@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Et skjema</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/2.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="endre.js"></script>
+    <script src="validering.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Endre Motorvogn</h1>
+            <form class="form">
+                <input type="hidden" id="id">
+                <div class="form-group">
+                    <div id="feil" style="color: red"></div>
+                    <label for="personnr">Personnr</label>
+                    <input type="text" class="form-control" id="personnr" onchange="validerPersonnr(this.value)"/>
+                    <span id="feilPersonnr" style="color:red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="navn">Navn</label>
+                    <input type="text" class="form-control" id="navn" onchange="validerNavn(this.value)"/>
+                    <span id="feilNavn" style="color:red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" class="form-control" id="adresse" onchange="validerAdresse(this.value)"/>
+                    <span id="feilAdresse" style="color:red"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="kjennetegn">Kjennetegn</label>
+                    <input type="text" class="form-control" id="kjennetegn" onchange="validerKjennetegn(this.value)"/>
+                    <span id="feilKjennetegn" style="color:red"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="merke">Merke</label>
+                    <div id="merke" class="dropdown">
+                        <div id="feilMerke" style="color: red"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <div id="type" class="dropdown">
+                        <div id="feilType" style="color: red"></div>
+                    </div>
+                </div>
+                <input type="button" value="Endre" class="btn btn-primary" onclick="validerOgEndre()"><br/>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Hei</title>
+</head>
+<body>
+    <h1>Første webprogram</h1>
+    Skriv inn navnet :<input type="text" id="navn"/>
+    <button id="knapp" onclick="hentData()">Trykk her</button>
+    <div id="hallo">
+    </div>
+    <script type="application/javascript">
+        function hentData() {
+            const url = "http://localhost:8080/?navn="+$("#navn").val();
+            $.get(url, function(data) {
+                    $("#hallo").html(data);
+                }
+            );
+        };
+    </script>
+</body>
+</html>

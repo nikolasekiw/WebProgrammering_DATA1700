@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig 1</title>
+    <script src="KinoBilletter.js"></script>
+    <link rel="stylesheet" href="KinoBilletter.css">
+</head>
+<body>
+
+<h1>Bestilling av kinobilletter</h1>
+<form id="reset">
+    Velg film: <select id="film">
+    <option value="feil">Velg film her</option>
+    <option>Selvportrett</option>
+    <option>Trolls</option>
+    <option>Dum og dummere</option>
+    <option>Harry potter</option>
+    <option>Titanic</option>
+    <option>Joker</option>
+    <option>Forest Gump</option>
+    <option>Askepott</option>
+</select>
+    <p style="display: inline" id="filmFeil"></p><br>
+    <br>
+
+    Antall billetter:
+    <input id="antall" type="text" size="2">
+    <p style="display: inline" id="antallFeil"></p>
+    <br>
+    <br>
+    Fornavn:
+    <input id="fornavn" type="text">
+    <p style="display: inline" id="fornavnFeil"></p>
+    <br>
+
+    Etternavn:
+    <input id="etternavn" type="text">
+    <p style="display: inline" id="etternavnFeil"></p>
+    <br>
+
+    Telefonnr:
+    <input id="telefonnr" type="text">
+    <p style="display: inline" id="telefonnrFeil"></p>
+    <br>
+
+    Epost:
+    <input id="epost" type="text">
+    <p style="display: inline" id="epostFeil"></p><br>
+    <br>
+</form>
+<button onclick="kjopBillett()">Kjøp billett</button>
+
+<h3>Alle billetter</h3>
+<div id="kjøpteBilletter"></div>
+
+<button id="slettBilletter" onclick="slettBilletter()">Slett alle billettene</button>
+</body>
+</html>

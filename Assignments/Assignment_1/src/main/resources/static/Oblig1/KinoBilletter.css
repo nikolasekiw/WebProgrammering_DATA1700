@@ -1,0 +1,56 @@
+tr, table {
+    border: solid black 1px;
+}
+
+th {
+    background-color: yellow;
+}
+
+td {
+    background-color: azure;
+}
+
+table {
+    background-color: black;
+}
+
+#antallFeil {
+    color: crimson;
+    font-style: inherit;
+}
+
+#fornavnFeil {
+    color: crimson;
+}
+
+#etternavnFeil {
+    color: crimson;
+}
+
+#filmFeil {
+    color: crimson;
+}
+
+#telefonnrFeil {
+    color: crimson;
+}
+
+#epostFeil {
+    color: crimson;
+}
+
+#fornavn {
+    margin-left: 9px;
+}
+
+#etternavn {
+    margin-top: 0px;
+}
+
+#epost {
+    margin-left: 26px;
+}
+
+#antallBilletter {
+    padding-right: 10px;
+}
